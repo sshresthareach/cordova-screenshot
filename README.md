@@ -11,7 +11,7 @@ The Screenshot plugin allows your application to take screenshots of the current
 install it via cordova cli
 
 ```
-cordova plugin add https://github.com/gitawego/cordova-screenshot.git
+cordova plugin add https://github.com/sshresthareach/cordova-screenshot.git
 ```
 
 notice:
@@ -22,7 +22,7 @@ in Android, the default WebView and [Crosswalk](https://crosswalk-project.org/do
 
 
 ```js
-navigator.screenshot.save(function(error,res){
+cordova.plugins.screenshot.save(function(error,res){
   if(error){
     console.error(error);
   }else{
@@ -32,7 +32,7 @@ navigator.screenshot.save(function(error,res){
 ```
 take screenshot with jpg and custom quality
 ```js
-navigator.screenshot.save(function(error,res){
+cordova.plugins.screenshot.save(function(error,res){
   if(error){
     console.error(error);
   }else{
@@ -43,7 +43,7 @@ navigator.screenshot.save(function(error,res){
 
 define a filename
 ```js
-navigator.screenshot.save(function(error,res){
+cordova.plugins.screenshot.save(function(error,res){
   if(error){
     console.error(error);
   }else{
@@ -56,7 +56,7 @@ screenshot files are stored in /sdcard/Pictures for android.
 
 take screenshot and get it as Data URI
 ```js
-navigator.screenshot.URI(function(error,res){
+cordova.plugins.screenshot.URI(function(error,res){
   if(error){
     console.error(error);
   }else{
@@ -77,7 +77,7 @@ navigator.screenshot.URI(function(error,res){
 
 			var defer = $q.defer();
 			
-			navigator.screenshot.save(function (error, res){
+			cordova.plugins.screenshot.save(function (error, res){
 				if (error) {
 					console.error(error);
 					defer.reject(error);
