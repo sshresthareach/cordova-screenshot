@@ -4,17 +4,17 @@
 
 interface screenshot {
     save(
-        callback: () => void,
+        callback: (response: error | null, data: string) => void,
         format: string,
         quality: number,
         filename: string
     );
     URI(
-        callback: () => void,
+        callback: (response: error | null, data: string) => void,
         quality: number
     );
     URISync(
-        callback: () => void,
+        callback: (response: error | null, data: string) => void,
         quality: number
     );
 }
