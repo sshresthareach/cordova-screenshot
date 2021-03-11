@@ -10,11 +10,11 @@ interface screenshot {
         filename: string
     );
     URI(
-        callback: (response: string | null, data: string) => void,
+        callback: (response: string | null, data: {URI: string}) => void,
         quality: number
     );
     URISync(
-        callback: (response: string | null, data: string) => void,
+        callback: (response: string | null, data: {URI: string}) => void,
         quality: number
     );
 }
